@@ -1,6 +1,8 @@
-// Obtener el año actual para el copyright
-const today = new Date();
-document.getElementById("currentyear").textContent = today.getFullYear();
+/
+const fechaLegible = new Date(document.lastModified).toLocaleDateString('en-EN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
 
-// Obtener la fecha de última modificación del documento
-document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+document.getElementById('lastModified').textContent = "Last Modification: " + fechaLegible;
