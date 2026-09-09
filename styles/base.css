@@ -169,29 +169,6 @@ aside {
     align-self: stretch;
 }
 
-aside h2 {
-    margin-bottom: 1rem;
-    color: var(--heading-color);
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin-bottom: 0.5rem;
-}
-
-aside ul li a {
-    color: var(--nav-link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-aside ul li a:hover {
-    color: var(--nav-hover-color);
-}
 
 footer {
     background-color: var(--nav-background-color);
