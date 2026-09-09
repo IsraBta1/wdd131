@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0b3f3f;
+  --primary-color: #0b3f3f;
     --secondary-color: #1f2937;
     --background-color: #f3f4f6;
     --section-background-color: #e5e7eb;
@@ -9,6 +9,8 @@
     --card-background-color: #ffffff;
     --card-shadow-color: #0000001f;
     --nav-background-color: #1f2937;
+    --nav-link-color: #f9fafb;
+    --nav-hover-background: #374151;
     --footer-text-color: #f9fafb;
 }
 
