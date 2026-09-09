@@ -1,3 +1,18 @@
+:root {
+    --primary-color: #0f766e;
+    --secondary-color: #1f2937;
+    --background-color: #f3f4f6;
+    --section-background-color: #e5e7eb;
+    --text-color: #1f2937;
+    --heading-color: var(--primary-color);
+    --card-background-color: #ffffff;
+    --card-shadow-color: rgba(0, 0, 0, 0.12);
+    --nav-background-color: var(--secondary-color);
+    --nav-link-color: #ffffff;
+    --nav-hover-background: #374151;
+    --footer-text-color: var(--primary-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +22,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
@@ -19,12 +34,12 @@ header span {
     display: block;
     width: 100%;
     font-size: 1.5rem;
-    color: darkcyan;
+    color: var(--heading-color);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
     padding: 1rem;
     text-align: center;
 }
@@ -41,14 +56,14 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: var(--nav-link-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #555;
+    background-color: var(--nav-hover-background);
     border-radius: 5px;
 }
 
@@ -63,7 +78,7 @@ main {
     gap: 1rem;
     align-items: stretch;
     justify-items: stretch;
-    background-color: #e0e0e0;
+    background-color: var(--section-background-color);
 }
 
 main > h1 {
@@ -72,11 +87,11 @@ main > h1 {
     text-align: center;
     margin: 2rem 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: darkcyan;
+    color: var(--heading-color);
 }
 
 main section h2 {
-    color: darkcyan;
+    color: var(--heading-color);
 }
 
 .card {
@@ -102,10 +117,10 @@ main section h2 {
 }
 
 .card, aside {
-    background-color: #fff;
+    background-color: var(--card-background-color);
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--card-shadow-color);
 }
 
 .card:nth-of-type(1) h2,
@@ -154,8 +169,8 @@ aside {
 }
 
 footer {
-    background-color: #333;
-    color: darkcyan;
+    background-color: var(--nav-background-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 1rem;
 }
