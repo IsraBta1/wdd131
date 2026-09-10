@@ -1,17 +1,17 @@
 :root {
-        --primary-color: #0b3f3f;
-    --secondary-color: #1f2937;
+    --primary-color: hsl(180, 71%, 15%);
+    --secondary-color: hsl(218, 28%, 17%);
     --background-color: hsl(220, 14%, 96%);
-        --section-background-color: #e5e7eb;
-    --text-color: #111827;
-    --heading-color: #0b3f3f;
-    --header-highlight-color: #f9fafb;
-    --card-background-color: #ffffff;
-    --card-shadow-color: #0000001f;
-    --nav-background-color: #1f2937;
-    --nav-link-color: #f9fafb;
-    --nav-hover-background: #374151;
-    --footer-text-color: #f9fafb;
+    --section-background-color: hsl(214, 32%, 91%);
+    --text-color: hsl(221, 39%, 11%);
+    --heading-color: hsl(180, 71%, 15%);
+    --header-highlight-color: hsl(210, 20%, 98%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --card-shadow-color: hsla(0, 0%, 0%, 0.12);
+    --nav-background-color: hsl(218, 28%, 17%);
+    --nav-link-color: hsl(210, 20%, 98%);
+    --nav-hover-background: hsl(215, 25%, 27%);
+    --footer-text-color: hsl(210, 20%, 98%);
 }
 
 * {
