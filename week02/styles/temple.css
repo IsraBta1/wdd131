@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color-text: #eee;
+    --primary-background-color: #066F2B;
+    --secundary-background-color:#011809;
+}
+
+body {
+    margin: 25px auto;
+    padding-left: 25px;
+    background-color: var(--primary-background-color);
+    max-width: 1200px;
+
+}
+
+body header {
+    background-color: var(--secundary-background-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    height: 5rem;
+    width: auto;
+}
+
+body header h1 {
+    padding-left: 40px; 
+    color: var(--primary-color-text);
+    transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+body header > a {
+    text-decoration: none;
+}
+
+body header > a:focus-visible {
+    outline: 2px solid var(--primary-color-text);
+    outline-offset: 4px;
+}
+
+body header h1:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.35);
+}
+
+body header nav {
+    width: 350px;
+    padding-right: 20px;
+}
+
+body header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+body header nav ul li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--primary-color-text);
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+body header nav ul li a:hover,
+body header nav ul li a:focus-visible {
+    background-color: var(--primary-background-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
