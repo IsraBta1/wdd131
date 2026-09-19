@@ -9,6 +9,8 @@
     --primary-background-color: #066F2B;
     --secundary-background-color:#011809;
     --border-solid-color: #084403;
+    --highlight-color: #ffffff;
+    --heading-shadow-color: #ffffff59;
 }
 
 body {
@@ -43,9 +45,9 @@ body header > a:focus-visible {
 }
 
 body header h1:hover {
-    color: #ffffff;
+  color: var(--highlight-color);
     transform: translateY(-2px);
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.35);
+  text-shadow: 0 2px 8px var(--heading-shadow-color);
 }
 
 body header nav {
@@ -72,7 +74,7 @@ body header nav ul li a {
 body header nav ul li a:hover,
 body header nav ul li a:focus-visible {
     background-color: var(--primary-background-color);
-    color: #ffffff;
+  color: var(--highlight-color);
     transform: translateY(-2px);
 }
 
