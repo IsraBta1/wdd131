@@ -1,20 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
     --primary-color-text: #eee;
     --primary-background-color: #066F2B;
     --secundary-background-color:#011809;
+    --border-solid-color: #084403;
 }
 
 body {
+    width: min(calc(100% - 32px), 1200px);
     margin: 25px auto;
-    padding-left: 25px;
     background-color: var(--primary-background-color);
-    max-width: 1200px;
-
 }
 
 body header {
@@ -74,4 +74,107 @@ body header nav ul li a:focus-visible {
     background-color: var(--primary-background-color);
     color: #ffffff;
     transform: translateY(-2px);
+}
+
+/*main is grid template*/
+
+/* Reseteo básico para las imágenes */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Mantiene la proporción de la imagen sin distorsionarla */
+  border-radius: 4px;
+}
+
+/* Contenedor principal: Grid 3x3 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de ancho equivalente */
+  gap: 20px;                             /* Espacio entre celdas (filas y columnas) */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;                        /* Centra el contenedor principal */
+}
+
+/* Estilos opcionales para las tarjetas individuales */
+.grid-item {
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--border-solid-color);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio vertical interno entre img, h2 y p */
+}
+
+.grid-item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color-text);
+}
+
+.grid-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-color-text);
+  line-height: 1.4;
+}
+
+/* Movile */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+/*end of main*/
+
+/*footer*/
+footer {
+    background-color: var(--secundary-background-color);
+    color: var(--primary-color-text);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  body header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    height: auto;
+    padding: 18px 16px;
+  }
+
+  body header h1 {
+    padding-left: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  body header nav {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  body header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  body header nav ul li a {
+    padding: 8px 10px;
+  }
+
+  footer {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
 }
