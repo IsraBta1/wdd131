@@ -78,28 +78,28 @@ body header nav ul li a:focus-visible {
     transform: translateY(-2px);
 }
 
-/*main is grid template*/
+/* Main grid layout */
 
-/* Reseteo básico para las imágenes */
+/* Basic image reset */
 img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* Mantiene la proporción de la imagen sin distorsionarla */
+  object-fit: cover; /* Preserves the image ratio without distortion */
   border-radius: 4px;
 }
 
-/* Contenedor principal: Grid 3x3 */
+/* Main container: three-by-three grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de ancho equivalente */
-  gap: 20px;                             /* Espacio entre celdas (filas y columnas) */
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  gap: 20px;                             /* Space between rows and columns */
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;                        /* Centra el contenedor principal */
+  margin: 0 auto;                        /* Centers the main container */
 }
 
-/* Estilos opcionales para las tarjetas individuales */
+/* Individual card styles */
 .grid-item {
   background-color: var(--primary-background-color);
   border: 1px solid var(--border-solid-color);
@@ -107,7 +107,7 @@ img {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacio vertical interno entre img, h2 y p */
+  gap: 10px; /* Internal vertical space between image, caption, and paragraph */
 }
 
 .grid-item figcaption {
@@ -123,16 +123,16 @@ img {
   line-height: 1.4;
 }
 
-/* Movile */
+/* Mobile layout */
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr; /* 1 column */
+    grid-template-columns: 1fr; /* One column */
   }
 }
 
-/*end of main*/
+/* End of main */
 
-/*footer*/
+/* Footer */
 footer {
     background-color: var(--secundary-background-color);
     color: var(--primary-color-text);
