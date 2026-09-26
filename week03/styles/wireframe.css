@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --venezuela-yellow: yellow;
+    --venezuela-blue: blue;
+    --venezuela-red: red;
+    --color-text: #fff;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: min(100%, 1000px);
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url("/week03/images/venezuela.jpg");
+    background-size: cover;
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-attachment: fixed; 
+    
+}
+
+header {
+    margin: 25px 0;
+    background-color: var(--venezuela-red);
+    height: 50px;
+    color: var(--color-text);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex: 1;
+    padding: 2rem;
+}
+
+main section {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 300px;
+    padding: 4rem 1.5rem 1.5rem;
+    background-color: rgb(255 255 255 / 75%);
+    text-align: center;
+}
+
+main section h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.6rem 1rem;
+    background-color: var(--venezuela-red);
+    color: var(--color-text);
+}
+
+main ul {
+    list-style-position: inside;
+    text-align: left;
+}
+
+footer {
+    margin: 25px 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--venezuela-red);
+    color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+}
