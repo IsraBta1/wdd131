@@ -20,7 +20,7 @@ body {
     width: min(100%, 1000px);
     min-height: 100vh;
     margin: 0 auto;
-    background-image: url("/week03/images/venezuela.jpg");
+    background-image: url("../images/venezuela.jpg");
     background-size: cover;
     background-position: center;    
     background-repeat: no-repeat;    
