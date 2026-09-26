@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --venezuela-yellow: #ffff00;
+    --venezuela-blue: #0000ff;
+    --venezuela-red: #b00000;
+    --color-text: #ffffff;
+    --panel-background: #ffffffbf;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -32,9 +40,9 @@ body {
 
 header {
     margin: 25px 0;
-    background-color: #b00000;
+    background-color: var(--venezuela-red);
     height: 50px;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 main {
@@ -52,7 +60,7 @@ main section {
     min-width: 0;
     min-height: 300px;
     padding: 4rem 1.5rem 1.5rem;
-    background-color: #ffffffbf;
+    background-color: var(--panel-background);
     text-align: center;
 }
 
@@ -61,8 +69,8 @@ main section h2 {
     top: 0;
     left: 0;
     padding: 0.6rem 1rem;
-    background-color: #b00000;
-    color: #ffffff;
+    background-color: var(--venezuela-red);
+    color: var(--color-text);
 }
 
 main section h2::after {
@@ -71,7 +79,7 @@ main section h2::after {
     bottom: 0;
     left: 0;
     height: 3px;
-    background-color: #ffff00;
+    background-color: var(--venezuela-yellow);
     content: "";
 }
 
@@ -94,8 +102,8 @@ main ul {
 footer {
     margin: 25px 0;
     padding: 0.5rem 1rem;
-    background-color: #b00000;
-    color: #ffffff;
+    background-color: var(--venezuela-red);
+    color: var(--color-text);
 }
 
 @media (max-width: 600px) {
