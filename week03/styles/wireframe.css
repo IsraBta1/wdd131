@@ -20,12 +20,24 @@ body {
     width: min(100%, 1000px);
     min-height: 100vh;
     margin: 0 auto;
-    background-image: url("../images/venezuela.jpg");
-    background-size: cover;
-    background-position: center;    
-    background-repeat: no-repeat;    
-    background-attachment: fixed; 
-    
+    isolation: isolate;
+}
+
+.page-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: min(100vw, 1000px);
+    height: 100vh;
+    margin: auto;
+}
+
+.page-background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 header {
@@ -61,6 +73,16 @@ main section h2 {
     padding: 0.6rem 1rem;
     background-color: var(--venezuela-red);
     color: var(--color-text);
+}
+
+.weather-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weather-heading img {
+    filter: brightness(0) invert(1);
 }
 
 main ul {

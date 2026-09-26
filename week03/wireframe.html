@@ -12,6 +12,14 @@
     <script src="scripts/weather.js" defer></script>
 </head>
 <body>
+    <picture class="page-background" aria-hidden="true">
+        <source media="(max-width: 600px)" type="image/webp"
+            srcset="images/venezuela-368.webp 368w, images/venezuela-736.webp 736w" sizes="100vw">
+        <source type="image/webp" srcset="images/venezuela-736.webp 736w" sizes="min(100vw, 1000px)">
+        <img src="images/venezuela.jpg"
+            srcset="images/venezuela-368.jpg 368w, images/venezuela.jpg 736w"
+            sizes="(max-width: 600px) 100vw, min(100vw, 1000px)" alt="" fetchpriority="high">
+    </picture>
     <header>
         <h1>Venezuela</h1>
     </header>
@@ -32,7 +40,7 @@
         </section>
 
         <section id="weather-section">
-            <h2>Weather:</h2>
+            <h2 class="weather-heading">Weather: <img src="images/cloud.svg" alt="" width="24" height="24"></h2>
             <ul id="weather-list">
                 <li><strong>Temperature:</strong> <span id="temperature"></span></li>
                 <li><strong>Conditions:</strong> <span id="conditions"></span></li>
