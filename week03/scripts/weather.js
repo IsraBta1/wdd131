@@ -20,10 +20,11 @@ function displayWeather() {
     document.getElementById("temperature").textContent = `${weatherData.temperatureCelsius} °C`;
     document.getElementById("conditions").textContent = weatherData.conditions;
     document.getElementById("wind-speed").textContent = `${weatherData.windSpeedKmh} km/h`;
-    document.getElementById("wind-chill").textContent = calculateWindChill(
-        weatherData.temperatureCelsius,
-        weatherData.windSpeedKmh
-    );
+    const windChillIsValid = weatherData.temperatureCelsius <= 10
+        && weatherData.windSpeedKmh > 4.8;
+    document.getElementById("wind-chill").textContent = windChillIsValid
+        ? calculateWindChill(weatherData.temperatureCelsius, weatherData.windSpeedKmh)
+        : "N/A";
 }
 
 displayWeather();
