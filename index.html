@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Israel Betancourt">
+    <meta name="description" content="Israel J. Betancourt is a BYU-Idaho student studying Web Design and Development, creating engaging and user-friendly websites with modern front-end skills.">
+    <title>WDD131 - Dynamic Web Fundamentals - Israel Betancourt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
+    <header>
+        <span id="course-title">WDD131 - Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/israel-betancourt/">LinkedIn</a></li>
+                <li><a href="#">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <h1>Israel J. Betancourt</h1>
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpeg" alt="profile picture" width="150" height="200">
+                <p>Hello everyone! I am a Software Development student at BYU-Idaho. I am a young father passionate and dynamic and I love using my creativity to deliver excellent, reliable web designs and websites.</p>
+            </section>
+            <section class="card">
+                <h2>Bolivar, Venezuela</h2>
+                <p>Venezuela is a beautiful country, rich in vegetation and culture; it enjoys an excellent tropical climate and diverse regions with weather conditions that any foreigner would love. The Venezuelan Andes offer cool temperatures along with a wide variety of fruits and vegetation; the plains boast a thriving agricultural sector; the west is home to industrial zones; and the east is rich in mineral resources.</p>
+                <img src="images/venezuela.jpg" alt="venezuela picture" width="150" height="100">
+            </section>
+            <aside>
+                <h2>Web Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Documentation</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript Documentation</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                </ul>
+            </aside>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Israel J. Betancourt • Bolivar City / Venezuela</p>
+        <p id="lastModified">Last Modification: </p>
+    </footer>
 </body>
 </html>

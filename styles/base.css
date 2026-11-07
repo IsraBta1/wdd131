@@ -1,0 +1,200 @@
+:root {
+    --primary-color: hsl(180, 71%, 15%);
+    --secondary-color: hsl(218, 28%, 17%);
+    --background-color: hsl(220, 14%, 96%);
+    --section-background-color: hsl(214, 32%, 91%);
+    --text-color: hsl(221, 39%, 11%);
+    --heading-color: hsl(180, 71%, 15%);
+    --header-highlight-color: hsl(210, 20%, 98%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --card-shadow-color: hsla(0, 0%, 0%, 0.12);
+    --nav-background-color: hsl(218, 28%, 17%);
+    --nav-link-color: hsl(210, 20%, 98%);
+    --nav-hover-background: hsl(215, 25%, 27%);
+    --footer-text-color: hsl(210, 20%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100%;
+}
+
+header span {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--header-highlight-color);
+}
+
+header {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: var(--nav-hover-background);
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "title title"
+        "about aside"
+        "location aside";
+    gap: 1rem;
+    align-items: stretch;
+    justify-items: stretch;
+    background-color: var(--section-background-color);
+}
+
+main > h1 {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--heading-color);
+}
+
+main section h2 {
+    color: var(--heading-color);
+}
+
+.card {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--card-shadow-color);
+}
+
+.card h2 {
+    grid-column: 1 / -1;
+}
+
+.card:nth-of-type(2) {
+    grid-area: location;
+    grid-template-columns: 220px 1fr;
+}
+
+.card:nth-of-type(1) img {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card:nth-of-type(1) p {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.card:nth-of-type(2) img {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.card:nth-of-type(2) p {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+main section p {
+    justify-self: start;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+main aside {
+    grid-area: aside;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    align-self: stretch;
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--card-shadow-color);
+}
+
+main aside h2 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+main aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+main aside ul li {
+    margin: 0.5rem 0;
+}
+
+main aside ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+main aside ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+
+
+footer {
+    background-color: var(--nav-background-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
