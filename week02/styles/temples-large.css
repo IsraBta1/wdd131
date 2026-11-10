@@ -1,0 +1,30 @@
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    body header {
+        grid-template-columns: 1fr auto;
+        height: 5rem;
+    }
+
+    body header h1 {
+        padding-left: 40px;
+        font-size: 2rem;
+    }
+
+    body header nav {
+        width: 350px;
+        padding-right: 20px;
+    }
+
+    body header nav ul {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
