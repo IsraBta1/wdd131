@@ -18,7 +18,12 @@
         padding-right: 20px;
     }
 
+    .menu-toggle {
+        display: none;
+    }
+
     body header nav ul {
+        display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
     }
@@ -26,5 +31,52 @@
     footer {
         padding: 10px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--primary-color-text);
+        border-radius: 6px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        margin: 0 auto;
+        background-color: var(--primary-color-text);
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 2px solid var(--primary-color-text);
+        outline-offset: 3px;
+    }
+
+    body header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+    }
+
+    body header nav.is-open ul {
+        display: flex;
     }
 }
