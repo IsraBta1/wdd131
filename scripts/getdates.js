@@ -19,3 +19,5 @@ if (lastModifiedElement) {
         lastModifiedElement.textContent = "Last Modification: unavailable";
     }
 }
+
+/*get date */

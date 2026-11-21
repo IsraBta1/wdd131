@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela | Data and Weather</title>
+    <meta name="author" content="Israel J. Betancourt">
+    <meta name="description" content="This page is designed to show the climate, as well as certain aspects of Venezuela such as its dimensions, code, and language.">
+    <link rel="stylesheet" href="styles/wireframe.css">
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+    <picture class="page-background" aria-hidden="true">
+        <source media="(max-width: 600px)" type="image/webp"
+            srcset="images/venezuela-368.webp 368w, images/venezuela-736.webp 736w" sizes="100vw">
+        <source type="image/webp" srcset="images/venezuela-736.webp 736w" sizes="100vw">
+        <img src="images/venezuela.jpg"
+            srcset="images/venezuela-368.jpg 368w, images/venezuela.jpg 736w"
+            sizes="100vw" alt="" fetchpriority="high">
+    </picture>
+    <header>
+        <h1>Venezuela</h1>
+    </header>
+    <main>
+        <section id="data-section">
+            <h2>Data</h2>
+            <ul id="data-list">
+                <li><strong>Area:</strong> <span id="area"></span></li>
+                <li><strong>Population:</strong> <span id="population"></span></li>
+                <li><strong>Capital:</strong> <span id="capital"></span></li>
+                <li><strong>Languages:</strong> <span id="languages"></span></li>
+                <li><strong>Currency:</strong> <span id="currency"></span></li>
+                <li><strong>Time Zone:</strong> <span id="time-zone"></span></li>
+                <li><strong>Calling Code:</strong> <span id="calling-code"></span></li>
+                <li><strong>Internet TLD:</strong> <span id="internet-tld"></span></li>
+
+           </ul>
+        </section>
+
+        <section id="weather-section">
+            <h2 class="weather-heading">Weather <img src="images/cloud.svg" alt="" width="24" height="24"></h2>
+            <ul id="weather-list">
+                <li><strong>Temperature:</strong> <span id="temperature"></span></li>
+                <li><strong>Conditions:</strong> <span id="conditions"></span></li>
+                <li><strong>Wind:</strong> <span id="wind-speed"></span></li>
+                <li><strong>Wind Chill:</strong> <span id="wind-chill"></span></li>
+           </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Israel J. Betancourt • Bolivar City / Venezuela</p>
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+</body>
+</html>
