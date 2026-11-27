@@ -14,6 +14,7 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   width: min(calc(100% - 32px), 1200px);
   margin: 25px auto;
   background-color: var(--primary-background-color);
