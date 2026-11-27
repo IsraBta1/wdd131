@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color-text: #eee;
+    --primary-background-color: #066F2B;
+    --secundary-background-color:#011809;
+    --border-solid-color: #084403;
+    --highlight-color: #ffffff;
+    --heading-shadow-color: #ffffff59;
+}
+
+body {
+    width: min(calc(100% - 32px), 1200px);
+    margin: 25px auto;
+    background-color: var(--primary-background-color);
+}
+
+body header {
+    background-color: var(--secundary-background-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    height: 5rem;
+    width: auto;
+}
+
+body header h1 {
+    padding-left: 40px; 
+    color: var(--primary-color-text);
+    transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+body header > a {
+    text-decoration: none;
+}
+
+body header > a:focus-visible {
+    outline: 2px solid var(--primary-color-text);
+    outline-offset: 4px;
+}
+
+body header h1:hover {
+  color: var(--highlight-color);
+    transform: translateY(-2px);
+  text-shadow: 0 2px 8px var(--heading-shadow-color);
+}
+
+body header nav {
+    width: 350px;
+    padding-right: 20px;
+}
+
+body header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+body header nav ul li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--primary-color-text);
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+body header nav ul li a:hover,
+body header nav ul li a:focus-visible {
+    background-color: var(--primary-background-color);
+  color: var(--highlight-color);
+    transform: translateY(-2px);
+}
+
+/* Main grid layout */
+
+/* Basic image reset */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Preserves the image ratio without distortion */
+  border-radius: 4px;
+}
+
+/* Main container: three-by-three grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  gap: 20px;                             /* Space between rows and columns */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;                        /* Centers the main container */
+}
+
+/* Individual card styles */
+.grid-item {
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--border-solid-color);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Internal vertical space between image, caption, and paragraph */
+}
+
+.grid-item figcaption {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color-text);
+}
+
+.grid-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-color-text);
+  line-height: 1.4;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* One column */
+  }
+}
+
+/* End of main */
+
+/* Footer */
+footer {
+    background-color: var(--secundary-background-color);
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+  color: #000;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  body header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    height: auto;
+    padding: 18px 16px;
+  }
+
+  body header h1 {
+    padding-left: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  body header nav {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  body header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  body header nav ul li a {
+    padding: 8px 10px;
+  }
+
+  footer {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}

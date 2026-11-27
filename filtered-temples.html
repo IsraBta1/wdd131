@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Israel J. Betancourt">
+    <meta name="description" content="Temple album featuring temples of The Church of Jesus Christ of Latter-day Saints.">
+    <link rel="stylesheet" href="styles/temple.css">
+    <link rel="stylesheet" href="styles/media-query-large.css">
+    <script src="scripts/temple.js" defer></script>
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="temple.html"><h1>Temple Album</h1></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="primary-navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="grid-container"></main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Israel J. Betancourt • Bolivar City / Venezuela</p>
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+</body>
+</html>
